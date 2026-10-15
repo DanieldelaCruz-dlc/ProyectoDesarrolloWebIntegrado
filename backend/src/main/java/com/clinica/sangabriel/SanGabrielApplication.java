@@ -1,4 +1,4 @@
-package com.clinica.SanGabriel;
+package com.clinica.sangabriel;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
