@@ -6,15 +6,9 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.AllArgsConstructor;
 
 @Entity
 @Table(name = "especialidades")
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
 public class Especialidad {
 
     @Id
@@ -30,4 +24,46 @@ public class Especialidad {
 
     @Column(columnDefinition = "TINYINT(1) DEFAULT 1")
     private Boolean estado = true;
+
+    public Especialidad() {
+    }
+
+    public Especialidad(Integer idEspecialidad, String nombre, String descripcion, Boolean estado) {
+        this.idEspecialidad = idEspecialidad;
+        this.nombre = nombre;
+        this.descripcion = descripcion;
+        this.estado = estado;
+    }
+
+    public Integer getIdEspecialidad() {
+        return idEspecialidad;
+    }
+
+    public void setIdEspecialidad(Integer idEspecialidad) {
+        this.idEspecialidad = idEspecialidad;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
+    public Boolean getEstado() {
+        return estado;
+    }
+
+    public void setEstado(Boolean estado) {
+        this.estado = estado;
+    }
 }

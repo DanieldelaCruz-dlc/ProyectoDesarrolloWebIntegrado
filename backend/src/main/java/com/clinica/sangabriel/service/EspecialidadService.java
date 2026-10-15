@@ -4,7 +4,6 @@ import com.clinica.sangabriel.model.Especialidad;
 import com.clinica.sangabriel.repository.EspecialidadRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 
 @Service
