@@ -66,6 +66,9 @@ public class SecurityConfig {
                     .hasAnyRole("ADMIN", "RECEPCION")
                 .requestMatchers(HttpMethod.PATCH, "/api/citas/**")
                     .hasAnyRole("ADMIN", "RECEPCION")
+                
+                .requestMatchers("/api/medicos/**").hasRole("ADMIN")
+                
                 .requestMatchers("/api/usuarios/me").authenticated()
                 .anyRequest().authenticated())
             .authenticationProvider(provider)
