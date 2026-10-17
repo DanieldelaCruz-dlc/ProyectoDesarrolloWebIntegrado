@@ -8,4 +8,8 @@ import java.util.List;
 @Repository
 public interface MedicoRepository extends JpaRepository<Medico, Integer> {
     List<Medico> findByEspecialidadIdEspecialidad(Integer idEspecialidad);
+
+    boolean existsByDni(String dni);
+
+    boolean existsByCmp(String cmp);
 }
