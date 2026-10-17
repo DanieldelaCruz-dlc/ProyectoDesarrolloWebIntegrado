@@ -24,11 +24,6 @@ public class MedicoController {
         return ResponseEntity.ok(medicoService.listarTodos());
     }
 
-    @GetMapping("/{id}")
-    public ResponseEntity<Medico> obtener(@PathVariable Integer id) {
-        return ResponseEntity.ok(medicoService.buscarPorId(id));
-    }
-
     @PostMapping
     public ResponseEntity<Medico> crear(@RequestBody Medico medico) {
         return new ResponseEntity<>(medicoService.registrar(medico), HttpStatus.CREATED);
